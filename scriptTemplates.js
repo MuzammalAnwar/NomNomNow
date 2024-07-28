@@ -22,7 +22,7 @@ function renderShoppingCartTemplate(food, i) {
     return /*html*/`
         <div class="shoppingCartOrder" id="order${i}">
             <p style="margin: 12px 0 0 0; font-size: 18px;"><b>${food['OrderAmount']}x</b> ${food['Food']} (${(food['Price'] + food['ToppingPrice']).toFixed(2)} €)</p>
-            <p>${displayChosenToppings(food)} </p>
+            <p style="margin: 6px; font-size: 14px;">${displayChosenToppings(food)} </p>
             <div class="orderAmount">
                 <img onclick="increaseAmountInShoppingCart(${i})" id="addFoodNr${i}" class="addIconShoppingCart" src="./img/addIcon2.jpg" alt="">
                 <img onclick="decreaseAmountInShoppingCart(${i})" id="addFoodNr${i}" class="minusIconShoppingCart" src="./img/minusIcon2.jpg" alt="">

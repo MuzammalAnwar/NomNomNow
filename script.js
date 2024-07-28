@@ -193,6 +193,7 @@ function checkToppings(i, j) {
         decreaseExtraToppings(i, j);
     }
     updateCurrentPrice(i)
+    updateSubtotal(i)
 }
 
 function increaseExtraToppings(i, j) {
@@ -202,6 +203,13 @@ function increaseExtraToppings(i, j) {
     foods[i]['ToppingPrice'] += foods[i]['ChoicePrice'][j];
     foods[i].SelectedToppings.push(foods[i]['Choices'][j]);
     updateCurrentPrice(i);
+}
+
+function updateSubtotal() {
+    let subtotal = 0;
+    shoppingCart.forEach(item => {
+        subtotal += (item.Price + item.ToppingPrice) * item.OrderAmount;
+    });
 }
 
 function updateCurrentPrice(index) {
