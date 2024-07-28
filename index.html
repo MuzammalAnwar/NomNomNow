@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="./scriptTemplates.js"></script>
+    <title>Nom Nom Now</title>
+</head>
+
+<body onload="render();">
+    <header>
+        <div class="logo">
+            <img class="logoImg" src="./img/logo.png" alt="">
+            <h1>Nom Nom Now</h1>
+        </div>
+        <h2 class="MenuText">Menu</h2>
+        <img class="burgerMenuIcon" src="./img/menu-icon.jpg" alt="">
+    </header>
+    <section class="orderSection">
+        <div class="menu">
+            <img class="restaurantImg" src="./img/salmon.jpg" alt="">
+            <div class="restaurantInfo">
+                <h2 class="mid">🌟 The Hungry Hippo 🌟</h2>
+                <div class="deliveryStats">
+                    <div class="starRating flex">
+                        <img class="deliveryIcon" src="./img/bewertungIcon.png" alt="">
+                        <span>4.6</span>
+                    </div>
+                    <div class="deliveryInfo flex">
+                        <img class="deliveryIcon" src="./img/lieferungIcon.png" alt="">
+                        <span>1.49 €</span>
+                    </div>
+                </div>
+                <span>
+                    <b>Cuisine:</b> Comfort Food <br>
+                    <b>Specialty:</b> Giant Burgers and Hearty Sandwiches <br>
+                    <b>Description:</b> Welcome to The Hungry Hippo, where big appetites are always satisfied! Our menu
+                    is
+                    packed with towering burgers, loaded sandwiches, and indulgent sides that are sure to fill you up.
+                    Whether you're craving a classic cheeseburger or a monster sub, we've got you covered. Our portions
+                    are as generous as a hippo's appetite, so come hungry and leave happy!
+                </span>
+            </div>
+            <div class="foodOptionsSection" id="foodOptions">
+            </div>
+        </div>
+        <div class="shoppingcart" id="shoppingCart">
+            <h2 class="shoppingCartText">Shopping Cart</h2>
+            <p>Your shopping cart is empty.</p>
+        </div>
+    </section>
+    <section id="showAddingOptions" class="d-none">
+        <div class="popup_container" onclick="hideElement('showAddingOptions','d-none')">
+            <div class="pop_up" id="pop_up" onclick="stopClose(event)">
+                <div class="ingredientsOptions" id="ingredientsOptions"></div>
+                <div class="totalSum" id="totalSum"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

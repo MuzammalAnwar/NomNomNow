@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    text-align: center;
+}
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkred;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: red #f1f1f1;
+}
+
+/* Optional to handle hover effect on Firefox */
+html {
+    --scrollbar-thumb-color: red;
+    --scrollbar-thumb-hover-color: darkred;
+}
+
+html {
+    scrollbar-color: var(--scrollbar-thumb-color) #f1f1f1;
+}
+
+html:hover {
+    scrollbar-color: var(--scrollbar-thumb-hover-color) #f1f1f1;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Roboto Flex", sans-serif;
+    border: 4px solid rgb(209, 38, 39);
+}
+
+button {
+    padding: 12px;
+    background-color: rgb(209, 38, 39);
+    color: white;
+    border-radius: 999px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+    border: 1px solid black;
+    padding: 11px 20px 11px 20px;
+    transition: all 150ms ease-in;
+}
+
+.roboto-flex {
+    font-family: "Roboto Flex", sans-serif;
+    font-style: normal;
+}
+
+.logoImg {
+    width: 10rem;
+    object-fit: cover;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+h1 {
+    color: rgb(209, 38, 39);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+}
+
+h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.MenuText {
+    margin-right: 10%;
+}
+
+img {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 2px solid rgb(209, 38, 39);
+}
+
+.burgerMenuIcon {
+    width: 56px;
+    height: 56px;
+}
+
+.restaurantImg {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.burgerImg {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+.orderSection {
+    display: flex;
+}
+
+.shoppingcart {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 12px 0 0 0;
+    border-left: 2px solid rgb(209, 38, 39);
+    border-top: 2px solid rgb(209, 38, 39);
+    border-right: 2px solid rgb(209, 38, 39);
+    border-bottom: 4px solid rgb(209, 38, 39);
+    right: 1px;
+    top: 99px;
+    bottom: 0px;
+    transition: all 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 999;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.restaurantInfo {
+    padding: 1rem 5rem 1rem 5rem;
+    border-bottom: 2px solid rgb(209, 38, 39);
+    border-top: 2px solid rgb(209, 38, 39);
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryIcon {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+}
+
+.deliveryStats {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 12px 0 12px 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.foodOption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid rgb(209, 38, 39);
+    width: 60%;
+    padding: 4px 12px 4px 12px;
+    border-radius: 24px;
+    margin: 8px 0 8px 0;
+}
+
+.foodOptionsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0 16px 0;
+}
+
+.addIcon {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    margin: 0 0 0 8px;
+}
+
+.addIcon:hover {
+    width: 52px;
+    height: 52px;
+    border: 2px solid rgb(209, 38, 39);
+    border-radius: 999px;
+}
+
+.addIconShoppingCart {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.minusIconShoppingCart {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+
+.addIconShoppingCart:hover {
+    background-color: rgb(207, 207, 207);
+    border-radius: 999px;
+}
+
+.minusIconShoppingCart:hover {
+    background-color: rgb(207, 207, 207);
+    border-radius: 999px;
+}
+
+.popup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.pop_up {
+    height: 50rem;
+    width: 40rem;
+    background-color: white;
+    border: 4px solid rgb(209, 38, 39);
+    border-radius: 12px;
+    margin: 16px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.d-none {
+    display: none;
+}
+
+.shoppingCartText {
+    padding: 0 0 8px 0;
+    text-align: center;
+    border-bottom: 2px solid rgb(209, 38, 39);
+    width: 100%;
+}
+
+.shoppingCartOrder {
+    text-align: center;
+}
+
+.closeIcon {
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.closeIcon:hover {
+    border-radius: 999px;
+    background-color: rgb(255, 255, 255);
+}
+
+.foodOptionPopUp {
+    margin: 0 14% 0 14%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.minusIcon {
+    object-fit: cover;
+    width: 43px;
+    height: 43px;
+}
+
+.minusIcon:hover {
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgb(209, 38, 39);
+    padding: 6px;
+    border-radius: 999px;
+}
+
+.foodOptionTitle {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 8px 0;
+    padding: 6px 0 8px 0;
+    border-bottom: 2px solid rgb(209, 38, 39);
+}
+
+.sumContainer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.totalSum {
+    background-color: rgb(209, 38, 39);
+    margin: 12px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 999px;
+    color: white;
+}
+
+.totalSum:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.fontweight {
+    font-weight: 200;
+    margin: 12px 0 12px 0;
+}
+
+.orderAmount {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0px 0 18px 0;
+}
+
+input {
+    padding: 4px 12px 4px 12px;
+    width: 17%;
+    outline: none;
+    border: none;
+    color: black;
+    background-color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* Checkbox Styling */
+.checkbox-wrapper-31:hover .check {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.checkbox-wrapper-31 .background {
+    fill: #ccc;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    -appearance: none;
+    -webkit-appearance: none;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked+svg .background {
+    fill: rgb(255 0 1);
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked+svg .stroke {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked+svg .check {
+    stroke-dashoffset: 0;
+}
+
+.totalAmount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid rgb(209, 38, 39);
+}
+
+@media (max-width: 1300px) {
+    .shoppingcart {
+        width: 30%;
+    }
+
+    .menu {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .orderSection {
+        flex-direction: column;
+    }
+
+    .shoppingcart {
+        position: relative;
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .totalAmount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 12px 0;
+    }
+
+    .flex2 {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .restaurantInfo {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .foodOption {
+        width: 80%;
+    }
+
+    input {
+        width: 30%;
+    }
+}
+
+@media (max-width: 430px) {
+    .foodOption {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pop_up {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .MenuText {
+        display: none;
+    }
+}
